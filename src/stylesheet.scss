@@ -1,0 +1,15 @@
+@import 'common/stylesheet/index.scss';
+// @import-normalize;
+
+.app {
+  width: 100%;
+
+  .dialogContainer {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
