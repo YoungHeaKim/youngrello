@@ -5,12 +5,14 @@ import classNames from 'classnames/bind';
 import styles from './stylesheet.scss';
 import { Home, Login } from 'Main/pages/index';
 import { MetaTag } from 'components/index';
+import { Fragment } from 'react';
+import { Aside, Header } from 'Main/components';
 
 const cx = classNames.bind(styles);
 
 const Main = ({ location }) => {
   const { pathname } = location;
-  console.log(pathname);
+
   return (
     <div className={cx('main')}>
       <MetaTag
@@ -18,7 +20,13 @@ const Main = ({ location }) => {
         description="용해의 개인 프로젝트"
         title="Youngrello"
       />
-      {pathname !== '/login' && <header></header>}
+      {pathname !== '/login' && (
+        <Fragment>
+          <Header />
+          <Aside />
+        </Fragment>
+      )}
+
       <Route
         render={({ location }) => (
           <Switch location={location}>

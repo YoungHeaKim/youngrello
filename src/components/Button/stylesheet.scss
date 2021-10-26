@@ -5,6 +5,7 @@
   text-align: center;
   outline: none;
   cursor: pointer;
+  color: black;
 
   &:empty:before {
     content: attr(data-placeholder);
