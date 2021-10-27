@@ -3,10 +3,9 @@ import React from 'react';
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './stylesheet.scss';
-import { Home, Login } from 'Main/pages/index';
+import { Home, Login, Detail } from 'Main/pages/index';
 import { MetaTag } from 'components/index';
-import { Fragment } from 'react';
-import { Aside, Header } from 'Main/components';
+import { Header } from 'Main/components';
 
 const cx = classNames.bind(styles);
 
@@ -20,17 +19,13 @@ const Main = ({ location }) => {
         description="용해의 개인 프로젝트"
         title="Youngrello"
       />
-      {pathname !== '/login' && (
-        <Fragment>
-          <Header />
-          <Aside />
-        </Fragment>
-      )}
+      {pathname !== '/login' && <Header />}
 
       <Route
         render={({ location }) => (
           <Switch location={location}>
             <Route exact path="/" component={Home} />
+            <Route exact path={`/:_id/:name`} component={Detail} />
             <Route exact path="/login" component={Login} />
             <Redirect path="*" to="/" />
           </Switch>

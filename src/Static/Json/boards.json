@@ -1,0 +1,30 @@
+{
+  "Boards": [
+    {
+      "name": "Test",
+      "lists": [
+        {
+          "_id": 0,
+          "name": "Welcome Board"
+        }
+      ]
+    },
+    {
+      "name": "Test2",
+      "lists": [
+        {
+          "_id": 0,
+          "name": "Welcome Board"
+        },
+        {
+          "_id": 1,
+          "name": "Board"
+        },
+        {
+          "_id": 2,
+          "name": "면접"
+        }
+      ]
+    }
+  ]
+}

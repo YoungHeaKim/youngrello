@@ -16,24 +16,13 @@ const Aside = ({ location }) => {
           {/* TODO: 로그인한 user의 "/name/boards"와 같은 식으로 들어가야함 */}
           <li className={cx('aside__nav--ul--li')}>
             <Button
-              to="/boards"
-              className={cx(
-                'aside__nav--ul--li--btn',
-                pathname === '/boards' && 'aside__active'
-              )}
-            >
-              Boards
-            </Button>
-          </li>
-          <li className={cx('aside__nav--ul--li')}>
-            <Button
               to="/"
               className={cx(
                 'aside__nav--ul--li--btn',
                 pathname === '/' && 'aside__active'
               )}
             >
-              Home
+              Boards
             </Button>
           </li>
         </ul>
